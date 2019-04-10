@@ -10,4 +10,6 @@ https://csinstallscripts.blob.core.windows.net/install-scripts/Install_CS_Agent.
 This will install an agent which sends back logs regarding connections the Windows PC makes back to CyberSift’s ElasticSearch. The installer should guide you through setup, asking you for the CyberSift server's IP address and the port number. 
 
 Just remember that the default ElasticSearch port is **9200** (Azure users recall that this port is not open by default on your resource group firewall). 
-- **Make sure the port 9200 is not publically open.**
+
+
+* **Make sure the port 9200 is not publically open.**

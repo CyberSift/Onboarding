@@ -30,24 +30,21 @@ const WizardStep2 = (props : Props) => {
         case "default":
             view = <Default nextStepHandler={props.nextStepHandler} changeViewHandler={(newView: string)=>changeViewState(newView)}/>
             break;
-    
-        case "paloalto":
-        case "other_syslog":
-        case "fortinet":
-            view = <Card style={{margin: 10}}>
-                <CardContent>
-                    <Markdown>{markdownContent}</Markdown>
-                </CardContent>
-                <CardActions>
-                <Button variant="contained" onClick={()=>changeViewState('default')} style={{marginLeft: "auto"}}>
-                        {'<< Back'}
-                </Button>
-                    <Button variant="contained" color="primary" onClick={props.nextStepHandler}>
-                        Next >>
-                    </Button>
-                </CardActions>                
-            </Card>
+              
         default:
+            view = <Card style={{margin: 10, background: "white"}}>
+                    <CardContent>
+                        <Markdown>{markdownContent}</Markdown>
+                    </CardContent>
+                    <CardActions>
+                    <Button variant="contained" onClick={()=>changeViewState('default')} style={{marginLeft: "auto"}}>
+                            {'<< Back'}
+                    </Button>
+                        <Button variant="contained" color="primary" onClick={props.nextStepHandler}>
+                            Next >>
+                        </Button>
+                    </CardActions>                
+                </Card>
             break;
     }
         
