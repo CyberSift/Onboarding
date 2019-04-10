@@ -1,6 +1,10 @@
-import React from 'react'
-import { Card, CardContent, Typography, CardActions, Button, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Divider, Grid, Avatar, List, ListItem } from "@material-ui/core";
+import React, { useContext } from 'react'
+import { Card, CardContent, Typography, CardActions, Button, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Divider, Grid, Avatar } from "@material-ui/core";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import WindowsAgent from './WindowsAgent';
+import Syslog from './Syslog';
+import Netflow from './Netflow';
+import Wizard2Context from './Context';
 
 
 interface Props {
@@ -9,6 +13,8 @@ interface Props {
 }
 
 const Default = (props: Props) => {
+
+    const context = useContext(Wizard2Context)
 
     return <Card>
                 <CardContent>
@@ -27,90 +33,25 @@ const Default = (props: Props) => {
                             <Grid container>
                                 <Grid item style={{width: "100%"}}>
                                     <Typography>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.
+                                        One of CyberSift's primary functions is to act as network connections auditing database. 
+                                        CyberSift Cerebrum® will add security relevant context information, such as if a connection was going to a known
+                                        malware host or Tor exit node. CyberSift Rangefinder® can then use machine learning
+                                        algorithms to help you pinpoint which of these connections are anomalous and perform more effective intrucion detection
+                                        and threat hunting
+                                        <br />
+                                        <br />
+                                        Several methods exist to ship network data to CyberSift:
+                                        <br />
+                                        <br />
                                     </Typography>
                                 </Grid>
                                 <Grid item style={{width: "100%"}}>
 
-                                    <ExpansionPanel>
-                                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                                            <Typography variant="subtitle2" style={{fontSize: 20, marginTop: 10}}>
-                                                Using Syslog
-                                            </Typography>
-                                        </ExpansionPanelSummary>
-                                        <ExpansionPanelDetails>
-                                            <Grid container>
-                                                <Grid item style={{width: "100%"}}>
-                                                    <Typography>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                                        sit amet blandit leo lobortis eget.
-                                                    </Typography>
-                                                </Grid>
-                                                <Grid item style={{width: "100%"}}>
-                                                    <List>
-                                                        <ListItem>
-                                                            <Avatar src="./img/paloalto_logo.jpg" style={{marginRight: 10}}/>
-                                                            Palo Alto Firewalls
-                                                            <Button 
-                                                                style={{marginLeft: "auto"}}
-                                                                variant="text" color="primary" 
-                                                                onClick={()=>props.changeViewHandler("paloalto")}
-                                                            >
-                                                                Details >>
-                                                            </Button>
-                                                        </ListItem>
-                                                        <Divider variant="inset" />
-                                                        <ListItem>
-                                                            <Avatar src="./img/fortinet_logo.png" style={{marginRight: 10}}/>
-                                                            Fortinet Firewalls
-                                                            <Button 
-                                                                style={{marginLeft: "auto"}}
-                                                                variant="text" color="primary" 
-                                                                onClick={()=>props.changeViewHandler("fortinet")}
-                                                            >
-                                                                Details >>
-                                                            </Button>
-                                                        </ListItem>
-                                                        <Divider variant="inset" />
-                                                        <ListItem>
-                                                            <Avatar src="./img/other.svg" style={{marginRight: 10}}/>
-                                                            Other...
-                                                            <Button 
-                                                                style={{marginLeft: "auto"}}
-                                                                variant="text" color="primary" 
-                                                                onClick={()=>props.changeViewHandler("other_syslog")}
-                                                            >
-                                                                Details >>
-                                                            </Button>
-                                                        </ListItem>
-                                                        <Divider variant="inset" />
-                                                    </List>
-                                                </Grid>
-                                            </Grid>
-                                        </ExpansionPanelDetails>
-                                    </ExpansionPanel>
+                                    {Syslog()}
 
-                                    <ExpansionPanel>
-                                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                                            <Typography variant="subtitle2" style={{fontSize: 20, marginTop: 10}}>
-                                                Using Netflow
-                                            </Typography>
-                                        </ExpansionPanelSummary>
-                                        <ExpansionPanelDetails>
-                                        <Typography>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                            sit amet blandit leo lobortis eget.
-                                        </Typography>
-                                        <Button 
-                                            style={{marginLeft: "auto"}}
-                                            variant="text" color="primary" 
-                                            onClick={()=>props.changeViewHandler("other_syslog")}
-                                        >
-                                            Details >>
-                                        </Button>
-                                        </ExpansionPanelDetails>
-                                    </ExpansionPanel>
+                                    {WindowsAgent()}
+
+                                    {Netflow()}
 
                                 </Grid>
                             </Grid>                      
@@ -128,9 +69,20 @@ const Default = (props: Props) => {
                             <Grid container>
                                 <Grid item style={{width: "100%"}}>
                                     <Typography>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.
+                                        CyberSift can act as a repository for Windows Event Logs, including <a href="https://www.rsaconference.com/writable/presentations/file_upload/hta-t09-how-to-go-from-responding-to-hunting-with-sysinternals-sysmon.pdf">Sysmon</a> output
+                                        CyberSift Rangefinder® includes several machine learning algorithms to help you identify anomalous sequences of events within your data.
+                                        <br />
+                                        <br />
+                                        Read on for technical details on how to collect Windows Event Logs
                                     </Typography>
+                                    <br />
+                                    <Button 
+                                        style={{marginLeft: "auto"}}
+                                        variant="text" color="primary" 
+                                        onClick={()=>context.changeViewHandler("windows_events")}
+                                    >
+                                        Details >>
+                                    </Button>
                                 </Grid>
                             </Grid>                      
                         </ExpansionPanelDetails>
@@ -147,8 +99,7 @@ const Default = (props: Props) => {
                             <Grid container>
                                 <Grid item style={{width: "100%"}}>
                                     <Typography>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                        sit amet blandit leo lobortis eget.
+                                        Check back for more information!
                                     </Typography>
                                 </Grid>
                             </Grid>                      

@@ -3,6 +3,7 @@ import Markdown from 'markdown-to-jsx';
 import Default from './WizardStep2/Default';
 import axios from 'axios';
 import { Button, Card, CardContent, CardActions } from '@material-ui/core';
+import Wizard2Context from './WizardStep2/Context';
 
 interface Props {
     nextStepHandler: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void
@@ -51,7 +52,12 @@ const WizardStep2 = (props : Props) => {
     }
         
 
-    return view
+    return <Wizard2Context.Provider value={{
+        changeViewHandler: changeViewState
+    }}>
+        {view}
+    </Wizard2Context.Provider>
+    
 }
 
 export default WizardStep2
