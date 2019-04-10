@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Grid, Fab, Avatar, Typography} from '@material-ui/core';
 import './App.css';
+import Wizard from './components/Wizard';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Grid container className="cs-container" justify="center" alignItems="center">
+          <Grid item xs={8} style={{ marginTop: "15vh", marginBottom: 5}}>
+            <Typography style={{color: "white", fontFamily:"Courier New"}} variant="display1">
+                CyberSift Onboarding
+              </Typography>
+            </Grid>
+
+          <Grid item xs={8} style={{background: 'white'}}>
+
+            <Wizard />
+
+          </Grid>
+        </Grid>
+        
+        <div>
+          <Fab style={{
+            position: 'absolute',
+            top: "3vh",
+            left: "2vw"
+          }}>
+            <Avatar src="./img/logo.png" style={{width:60, height: 60}}/>
+          </Fab>
+        </div>
+        
       </div>
     );
   }
