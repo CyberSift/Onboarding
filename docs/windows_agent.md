@@ -11,5 +11,6 @@ This will install an agent which sends back logs regarding connections the Windo
 
 Just remember that the default ElasticSearch port is **9200** (Azure users recall that this port is not open by default on your resource group firewall). 
 
-
-* **Make sure the port 9200 is not publically open.**
+-------------------
+* **Make sure the port 9200 is not publicly open.**
+-------------------
