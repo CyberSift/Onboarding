@@ -14,9 +14,13 @@ const WizardStep2 = (props : Props) => {
     const [markdownContent, changeMarkdownContent] = useState("")
 
     useEffect(()=>{
-        axios.get("https://raw.githubusercontent.com/CyberSift/CyberSift_Documentation/master/README.md").then(resp => {
-            changeMarkdownContent(resp.data)
-        })
+
+        if (viewState != "default"){
+            axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/${viewState}.md`).then(resp => {
+                changeMarkdownContent(resp.data)
+            })
+        }
+        
     }, [viewState])
 
     let view = <Fragment />

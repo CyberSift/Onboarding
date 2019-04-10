@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, Typography, CardActions, Button, Divider, ExpansionPanel, ExpansionPanelSummary, Avatar, ExpansionPanelDetails, Grid } from "@material-ui/core";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Markdown from 'markdown-to-jsx';
+import Axios from 'axios';
 
 interface wizardProps {
     nextStepHandler: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void
 }
 
 const WizardStep1 = (props : wizardProps) => {
+
+    const [onsite, changeOnsite] = useState("")
+    const [azure, changeAzure] = useState("")
+
+    useEffect(()=>{
+        Axios.get("https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/onpremises.md").then(resp => changeOnsite(resp.data))
+    },[changeOnsite])
+
+    useEffect(()=>{
+        Axios.get("https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/azure_deployment.md").then(resp => changeAzure(resp.data))
+    },[changeAzure])
 
     const view = 
         <Card>
@@ -28,8 +41,9 @@ const WizardStep1 = (props : wizardProps) => {
                         <Grid container>
                             <Grid item style={{width: "100%"}}>
                                 <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                    sit amet blandit leo lobortis eget.
+                                    <Markdown>
+                                        {onsite}
+                                    </Markdown>
                                 </Typography>
                             </Grid>
                         </Grid>                      
@@ -46,10 +60,9 @@ const WizardStep1 = (props : wizardProps) => {
                     <ExpansionPanelDetails>
                         <Grid container>
                             <Grid item style={{width: "100%"}}>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                    sit amet blandit leo lobortis eget.
-                                </Typography>
+                                <Markdown>
+                                    {azure}
+                                </Markdown>
                             </Grid>
                         </Grid>                      
                     </ExpansionPanelDetails>
