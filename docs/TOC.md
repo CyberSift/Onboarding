@@ -1,4 +1,4 @@
-## Documentation Table Of Contents
+## Table Of Contents
 ------------------------------------
 
 * Setting up alerts and notifications
