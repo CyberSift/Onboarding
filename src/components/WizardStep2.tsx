@@ -32,7 +32,7 @@ const WizardStep2 = (props : Props) => {
             break;
               
         default:
-            view = <Card style={{margin: 10, background: "white"}}>
+            view = <Card style={{margin: 10, background: "white", fontFamily: "'Open Sans', sans-serif"}}>
                     <CardContent>
                         <Markdown>{markdownContent}</Markdown>
                     </CardContent>

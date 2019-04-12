@@ -1,6 +1,6 @@
 ## Setting up email alerts
 
-***TL;DR** : Download and modify the **[NiFi templates located here](https://gist.github.com/dvas0004/3fd0e7c24c6d06f5095471e7b72b329b)** to setup email alerts*
+**TL;DR** : Download and modify the **[NiFi templates located here](https://gist.github.com/dvas0004/3fd0e7c24c6d06f5095471e7b72b329b)** to setup email alerts
 
 The CyberSift installation comes pre-packaged with an [Apache NiFi](https://nifi.apache.org/) instance - by default you can access this on **http://YOUR_CYBERSIFT_IP:9900/nifi** after modifying your firewall rules appropriately. 
 

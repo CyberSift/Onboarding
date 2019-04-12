@@ -16,7 +16,7 @@ const Docs = (props : DocsProps) => {
             .then(resp=>changeContent(resp.data))
     },[props.doc])
 
-    return <Paper style={{padding: 10, margin: 20}}>
+    return <Paper style={{padding: 10, margin: 20, fontFamily: "'Open Sans', sans-serif"}} >
         <Markdown>
             {content}
         </Markdown>

@@ -40,7 +40,7 @@ const WizardStep1 = (props : wizardProps) => {
                     <ExpansionPanelDetails>
                         <Grid container>
                             <Grid item style={{width: "100%"}}>
-                                <Typography>
+                                <Typography style={{fontFamily: "'Open Sans', sans-serif"}}>
                                     <Markdown>
                                         {onsite}
                                     </Markdown>
@@ -59,7 +59,7 @@ const WizardStep1 = (props : wizardProps) => {
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Grid container>
-                            <Grid item style={{width: "100%"}}>
+                            <Grid item style={{width: "100%", fontFamily: "'Open Sans', sans-serif"}}>
                                 <Markdown>
                                     {azure}
                                 </Markdown>
