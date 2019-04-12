@@ -1,5 +1,5 @@
 ## Table Of Contents
-------------------------------------
+
 
 * Setting up alerts and notifications
 
