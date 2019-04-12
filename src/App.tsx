@@ -21,6 +21,12 @@ class App extends Component {
             
 
           </Grid>
+          <Grid xs={9} />
+          <Grid xs={2}>
+            <Typography variant="overline" style={{color: "white", cursor: "pointer"}} onClick={()=>window.location.pathname="/docs/TOC.md"}>
+              Documentation
+            </Typography>
+          </Grid>
         </Grid>
         
         <div>
