@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Grid, Fab, Avatar, Typography} from '@material-ui/core';
 import './App.css';
 import Wizard from './components/Wizard';
+import Docs from './components/Docs';
 
 class App extends Component {
   render() {
@@ -14,9 +15,10 @@ class App extends Component {
               </Typography>
             </Grid>
 
-          <Grid item xs={8} style={{background: 'white'}}>
+          <Grid item xs={9} style={{background: 'white'}}>
 
-            <Wizard />
+            {window.location.pathname.startsWith("/docs/") ? <Docs doc={window.location.pathname} /> : <Wizard />}
+            
 
           </Grid>
         </Grid>
@@ -27,7 +29,7 @@ class App extends Component {
             top: "3vh",
             left: "2vw"
           }}>
-            <Avatar src="./img/logo.png" style={{width:60, height: 60}}/>
+            <Avatar src="/img/logo.png" style={{width:60, height: 60}}/>
           </Fab>
         </div>
         

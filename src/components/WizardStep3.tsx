@@ -1,8 +1,16 @@
-import React from 'react';
-import { Card, CardContent, Typography, CardActions, Button } from "@material-ui/core";
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, Typography, CardActions, Button, Divider } from "@material-ui/core";
+import Markdown from 'markdown-to-jsx';
+import Axios from 'axios';
 
 
 const WizardStep3 = () => {
+
+    const [markdownContent, changeMarkdownContent] = useState("")
+    useEffect(()=>{
+        Axios.get("https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/TOC.md")
+            .then(resp => changeMarkdownContent(resp.data))
+    }, [changeMarkdownContent])
 
     const view = 
         <Card>
@@ -12,8 +20,17 @@ const WizardStep3 = () => {
                 </Typography>
                 
                 <Typography variant="subtitle1" style={{fontSize: 20, marginTop: 10}}>
-                    TODO
+                    Please contact us for more information: <strong>info (at) cybersift.io</strong>
                 </Typography>
+
+                <Divider />
+
+                <Typography variant="overline" style={{fontSize: 20, marginTop: 10}}>
+                    Additional CyberSift Documentation:
+                </Typography>
+                <Markdown>
+                    {markdownContent}
+                </Markdown>
 
             </CardContent>
             <CardActions>
