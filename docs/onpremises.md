@@ -11,3 +11,7 @@
 
 curl -o install_cybersift.sh https://csinstallscripts.blob.core.windows.net/install-scripts/install_cybersift.sh && chmod +x install_cybersift.sh && ./install_cybersift.sh onsite debug
 ```
+
+3. After installation, the web UI should be available over HTTP. 
+
+4. The SSH management port has been changed to **2224**, so any future ssh connections should be made to this port rather than the default port 22(which is now being used by a honeypot).

@@ -52,3 +52,5 @@
 * Once this is done, a find the resource group just created and make a note of the public IP of the newly created Virtual Machine. You can access the UI via http://**YOUR_PUBLIC_IP**/
 
 * **Please note:** it’s recommended to delete the firewall rule allowing HTTP access and instead use more secure means of communication such as VPN or SSH Tunnels
+
+* The SSH management port for the VM has been changed to **2224**, so any future ssh connections should be made to this port rather than the default port 22 (which is now being used by a honeypot).
