@@ -1,6 +1,8 @@
 ## Prerequisites for network connection data ingestion
 
-CyberSift expects a certain pattern within your data.
+*Note this is only required if you are not using the provided CyberSift NiFi plugin which supports [PaloAlto](https://gettingstarted.cybersift.io/docs/paloalto.md) and [Fortinet](https://gettingstarted.cybersift.io/docs/fortinet.md) firewalls at the time of writing*
+
+If you are not using one of the firewalls that CyberSift supports directly, you can still ingest data from other firewalls by defining your own template pattern to ingest data. CyberSift expects a certain pattern within your data.
 
 For firewall traffic, the index must take the typical elasticsearch form of:
 
