@@ -1,3 +1,0 @@
-## Sending Palo Alto firewall syslog to CyberSift
-
-**TODO**

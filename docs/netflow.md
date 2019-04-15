@@ -31,4 +31,6 @@ Once at this stage, we now need to setup NiFi to monitor this directory and impo
 
 A full template for importing Netflow into CyberSift is provided in the link below (*please note that CyberSift expects to find certain fields present in the documents provided to ElasticSearch [as documented here](https://gettingstarted.cybersift.io/docs/ip_required_fields.md), the template provided below takes this into consideration*):
 
-* TODO: template
+* [Template Link](https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/templates/Netflow_To_ES.xml) (right-click to "Save As")
+
+![NIFI_NETFLOW](https://github.com/CyberSift/Onboarding/blob/master/public/img/docs/nifi_netflow.png?raw=true)

@@ -1,6 +1,15 @@
 ## Prerequisites for network connection data ingestion
 
-*Note this is only required if you are not using the provided CyberSift NiFi plugin which supports [PaloAlto](https://gettingstarted.cybersift.io/docs/paloalto.md) and [Fortinet](https://gettingstarted.cybersift.io/docs/fortinet.md) firewalls at the time of writing*
+*Note this is only required if you are not using the provided CyberSift NiFi plugin which supports:*
+
+* PaloAlto
+* Sonicwall
+* Mikrotik
+* Pfsense
+* Cisco ASA 
+* Cisco Router 
+
+*firewalls at the time of writing. If you are using one of the above firewalls, please read ["Sending plugin-supported firewall syslog to CyberSift"](https://gettingstarted.cybersift.io/docs/syslog_parser.md)*
 
 If you are not using one of the firewalls that CyberSift supports directly, you can still ingest data from other firewalls by defining your own template pattern to ingest data. CyberSift expects a certain pattern within your data.
 

@@ -45,12 +45,48 @@ const Syslog = () => {
                                 </ListItem>
                                 <Divider variant="inset" />
                                 <ListItem>
-                                    <Avatar src="./img/fortinet_logo.png" style={{marginRight: 10}}/>
-                                    Fortinet Firewalls
+                                    <Avatar src="./img/sonicwall_logo.svg" style={{marginRight: 10}}/>
+                                    SonicWall Firewalls
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("fortinet")}
+                                        onClick={()=>context.changeViewHandler("sonicwall")}
+                                    >
+                                        Details >>
+                                    </Button>
+                                </ListItem>
+                                <Divider variant="inset" />
+                                <ListItem>
+                                    <Avatar src="./img/pfsense_logo.png" style={{marginRight: 10}}/>
+                                    Pfsense Firewalls
+                                    <Button 
+                                        style={{marginLeft: "auto"}}
+                                        variant="text" color="primary" 
+                                        onClick={()=>context.changeViewHandler("pfsense")}
+                                    >
+                                        Details >>
+                                    </Button>
+                                </ListItem>
+                                <Divider variant="inset" />
+                                <ListItem>
+                                    <Avatar src="./img/mikrotik_logo.jpg" style={{marginRight: 10}}/>
+                                    Microtik Firewalls
+                                    <Button 
+                                        style={{marginLeft: "auto"}}
+                                        variant="text" color="primary" 
+                                        onClick={()=>context.changeViewHandler("microtik")}
+                                    >
+                                        Details >>
+                                    </Button>
+                                </ListItem>
+                                <Divider variant="inset" />
+                                <ListItem>
+                                    <Avatar src="./img/cisco_logo.png" style={{marginRight: 10}}/>
+                                    Cisco Firewalls / Routers
+                                    <Button 
+                                        style={{marginLeft: "auto"}}
+                                        variant="text" color="primary" 
+                                        onClick={()=>context.changeViewHandler("cisco")}
                                     >
                                         Details >>
                                     </Button>

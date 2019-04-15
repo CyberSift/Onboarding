@@ -10,8 +10,8 @@
 
 **Network Monitoring**
 
-* [Sending Palo Alto firewall syslog to CyberSift](https://gettingstarted.cybersift.io/docs/paloalto.md)
-* [Sending Fortinet firewall syslog to CyberSift](https://gettingstarted.cybersift.io/docs/fortinet.md)
+* [Sending plugin-supported firewall syslog to CyberSift](https://gettingstarted.cybersift.io/docs/syslog_parser.md)
+
 * [Prerequisites for network connection data ingestion](https://gettingstarted.cybersift.io/docs/ip_required_fields.md)
 * [Sending netflow data to CyberSift](https://gettingstarted.cybersift.io/docs/netflow.md)
 

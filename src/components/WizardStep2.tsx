@@ -17,7 +17,7 @@ const WizardStep2 = (props : Props) => {
     useEffect(()=>{
 
         if (viewState != "default"){
-            axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/${viewState}.md`).then(resp => {
+            axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/syslog_parser.md`).then(resp => {
                 changeMarkdownContent(resp.data)
             })
         }
