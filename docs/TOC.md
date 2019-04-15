@@ -5,6 +5,7 @@
 * [All-In-One list of NiFi templates](https://gettingstarted.cybersift.io/docs/nifi-templates.md)
 
 **Deployment**
+
 * [On premises CyberSift deployment](https://gettingstarted.cybersift.io/docs/onpremises.md)
 * [Azure CyberSift deployment](https://gettingstarted.cybersift.io/docs/azure_deployment.md)
 
