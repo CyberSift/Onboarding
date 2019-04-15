@@ -17,7 +17,7 @@ const WizardStep2 = (props : Props) => {
     useEffect(()=>{
 
         if (viewState != "default"){
-            axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/syslog_parser.md`).then(resp => {
+            axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master/docs/${viewState}.md`).then(resp => {
                 changeMarkdownContent(resp.data)
             })
         }
@@ -30,7 +30,7 @@ const WizardStep2 = (props : Props) => {
         case "default":
             view = <Default nextStepHandler={props.nextStepHandler} changeViewHandler={(newView: string)=>changeViewState(newView)}/>
             break;
-              
+
         default:
             view = <Card style={{margin: 10, background: "white", fontFamily: "'Open Sans', sans-serif"}}>
                     <CardContent>

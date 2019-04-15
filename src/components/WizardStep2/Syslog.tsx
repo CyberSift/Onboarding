@@ -38,7 +38,7 @@ const Syslog = () => {
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("paloalto")}
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
                                     >
                                         Details >>
                                     </Button>
@@ -50,7 +50,7 @@ const Syslog = () => {
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("sonicwall")}
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
                                     >
                                         Details >>
                                     </Button>
@@ -62,7 +62,7 @@ const Syslog = () => {
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("pfsense")}
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
                                     >
                                         Details >>
                                     </Button>
@@ -74,7 +74,7 @@ const Syslog = () => {
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("microtik")}
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
                                     >
                                         Details >>
                                     </Button>
@@ -86,7 +86,7 @@ const Syslog = () => {
                                     <Button 
                                         style={{marginLeft: "auto"}}
                                         variant="text" color="primary" 
-                                        onClick={()=>context.changeViewHandler("cisco")}
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
                                     >
                                         Details >>
                                     </Button>
