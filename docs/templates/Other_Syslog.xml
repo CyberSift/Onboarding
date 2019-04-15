@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description></description>
+    <groupId>016a100f-48b1-1099-5d02-6d9ffdaa67d6</groupId>
+    <name>Other_Syslog</name>
+    <snippet>
+        <labels>
+            <id>f76ef538-3ceb-323e-0000-000000000000</id>
+            <parentGroupId>5d27a662-4bbd-3377-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <height>185.7423095703125</height>
+            <label>9. (optional but recommended) - log failed operations
+</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>12px</value>
+                </entry>
+            </style>
+            <width>417.29052734375</width>
+        </labels>
+    </snippet>
+    <timestamp>04/15/2019 17:15:52 EEST</timestamp>
+</template>
