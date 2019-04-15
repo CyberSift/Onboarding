@@ -7,6 +7,7 @@
 **Deployment**
 
 * [On premises CyberSift deployment](https://gettingstarted.cybersift.io/docs/onpremises.md)
+
 * [Azure CyberSift deployment](https://gettingstarted.cybersift.io/docs/azure_deployment.md)
 
 **Alerting**
