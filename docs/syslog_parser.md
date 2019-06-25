@@ -29,8 +29,10 @@ Click on the "Properties" tab and for the **Parser** setting, select your firewa
 
 ![FirewallModels](https://github.com/CyberSift/Onboarding/blob/master/public/img/docs/ParseSyslogModels.png?raw=true)
 
+
 ## Additional Notes
 -------------------
+
 ### Checkpoint Firewall Details
 
 The Checkpoint firewall requires **"Log Exporter"** to be installed. Once installed you can run the following command:
@@ -38,4 +40,6 @@ The Checkpoint firewall requires **"Log Exporter"** to be installed. Once instal
 ```
 cp_log_export add name <name> [domain-server <domain-server>] target-server <CyberSift IP Address> target-port 514 protocol udp format cef
 ```
+
 -------------------
+
