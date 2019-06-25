@@ -57,7 +57,7 @@ const Syslog = () => {
                                 </ListItem>
                                 <Divider variant="inset" />
                                 <ListItem>
-                                    <Avatar src="./img/checkpoint_logo.svg" style={{marginRight: 10}}/>
+                                    <Avatar src="./img/checkpoint_logo.png" style={{marginRight: 10}}/>
                                     Checkpoint Firewalls
                                     <Button 
                                         style={{marginLeft: "auto"}}
