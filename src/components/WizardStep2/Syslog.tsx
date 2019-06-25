@@ -57,6 +57,18 @@ const Syslog = () => {
                                 </ListItem>
                                 <Divider variant="inset" />
                                 <ListItem>
+                                    <Avatar src="./img/checkpoint_logo.svg" style={{marginRight: 10}}/>
+                                    Checkpoint Firewalls
+                                    <Button 
+                                        style={{marginLeft: "auto"}}
+                                        variant="text" color="primary" 
+                                        onClick={()=>context.changeViewHandler("syslog_parser")}
+                                    >
+                                        Details >>
+                                    </Button>
+                                </ListItem>
+                                <Divider variant="inset" />
+                                <ListItem>
                                     <Avatar src="./img/pfsense_logo.png" style={{marginRight: 10}}/>
                                     Pfsense Firewalls
                                     <Button 
