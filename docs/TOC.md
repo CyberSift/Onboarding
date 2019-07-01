@@ -28,4 +28,8 @@
 
 * [Sending Windows Event logs to CyberSift](https://gettingstarted.cybersift.io/docs/windows_events.md)
 
+**Backup and Restore**
+
+* [Backing up and restoring the CyberSift server](https://gettingstarted.cybersift.io/docs/backup_and_restore.md)
+
 ... more to come!
