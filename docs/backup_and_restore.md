@@ -19,7 +19,7 @@ To ensure continuity of service, all the above need to be backed up regularly.
 
 **ElasticSearch data**
 
-ElasticSearch provides it's own easy-to-use backup and restore system via the [**Snapshot API**](https://www.elastic.co/guide/en/elasticsearch/reference/7.2/modules-snapshots.html). In a nutshell:
+The best way to backup ElasticSearch data is to use [replicas](https://codingexplained.com/coding/elasticsearch/understanding-replication-in-elasticsearch), at the cost of additional hardware. However, if the additional hardware is infeasible ElasticSearch provides it's own easy-to-use backup and restore system via the [**Snapshot API**](https://www.elastic.co/guide/en/elasticsearch/reference/7.2/modules-snapshots.html). In a nutshell:
 
 1. Update the `path.repo` setting in the `/etc/elasticsearch/elasticsearch.yml` file. The CyberSift server comes with a path repository already configured at `/data/es_backup`. Change this to a suitable value for your environment, and restart the elasticsearch service.
 2. Create a "repository" that references the above location, for example:
