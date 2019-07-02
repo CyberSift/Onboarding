@@ -10,10 +10,14 @@ interface DocsProps {
 const Docs = (props : DocsProps) => {
 
     const [content, changeContent] = useState("")
+    const docLoadedEvent = new Event('docLoaded');
 
     useEffect(()=>{
         Axios.get(`https://raw.githubusercontent.com/CyberSift/Onboarding/master${props.doc}`)
-            .then(resp=>changeContent(resp.data))
+            .then(resp=>{
+                changeContent(resp.data);
+                window.dispatchEvent(docLoadedEvent);
+            })
     },[props.doc])
 
     return <Paper style={{padding: 10, margin: 20, fontFamily: "'Open Sans', sans-serif"}} >
