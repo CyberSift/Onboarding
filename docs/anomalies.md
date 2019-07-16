@@ -12,6 +12,12 @@
 | <a id="anomalous_sequence"></a> **anomalous_sequence** | Detects an usual sequence of events in the Windows Event Logs. This check is applied to each domain computer individually, currently for the 'Application' and 'System' event logs
 | <a id="Volume_Anomaly"></a> **Volume_Anomaly** | Detects an usual spike or dip in the number of events in the Windows Event Logs. This check is applied to each unique Event ID.
 
+... more coming soon ...
+
 ### Network Connection Logs
 
-... coming soon ...
+| Anomaly Name | Description
+| - | - |
+| <a id="Volume_Anomaly"></a> **Volume_Anomaly** | Detects an usual spike or dip in the number of events in the network connection logs. This check is applied to each unique BGP ASN.
+
+... more coming soon ...
