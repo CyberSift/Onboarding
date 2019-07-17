@@ -4,7 +4,7 @@
 
 | Anomaly Name | Description
 | - | - |
-| <a id="AbnormalLogin"></a> **AbnormalLogin** | Detects if a subject user account has logged into the target computer in the past 7 days 
+| <a id="AbnormalLogin"></a> **AbnormalLogin** | Detects if a subject user account has logged into the target computer which has not been used by said user in the past 7 days 
 | <a id="AbnormalProcess"></a> **AbnormalProcess** | Detects if a process has been launched which has not been seen before. Works using Windows Sysmon (any event with an "Image" entry such as DNS, Network, file creation events, etc).
 | <a id="AbnormalService"></a> **AbnormalService** | Detects if a subject user account has logged into a domain service which they have not used in the recent past (approx last 7 days). Works using Windows event "audit success" (ID: 4769).
 | <a id="AbnormalServiceTime"></a> **AbnormalServiceTime** | Detects if a subject user account has logged into a domain service at a time which is significantly different from what is usual for that user. Works using Windows event "audit success" (ID: 4769).
