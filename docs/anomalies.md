@@ -10,10 +10,12 @@
 | <a id="AbnormalService"></a> **AbnormalService** | Detects if a subject user account has logged into a domain service which they have not used in the recent past (approx last 7 days). Works using Windows event ID: 4769.
 | <a id="AbnormalServiceTime"></a> **AbnormalServiceTime** | Detects if a subject user account has logged into a domain service at a time which is significantly different from what is usual for that user. Works using Windows event ID: 4769.
 | <a id="AbnormalServiceSet"></a> **AbnormalServiceSet** | Detects if a user account has accessed an unusual "Service Set" within one login session. A "Service Set" is a list of unique Windows Domain services (e.g. kerberos services) that a user typically accesses. Works using Windows event ID: 4769.
-| <a id="anomalous_sequence"></a> **anomalous_sequence** | Detects an usual sequence of events in the Windows Event Logs. This check is applied to each domain computer individually, currently for the 'Application' and 'System' event logs
-| <a id="Volume_Anomaly"></a> **Volume_Anomaly** | Detects an usual spike or dip in the number of events in the Windows Event Logs. This check is applied to each unique Event ID.
-| <a id="FileDelete_Volume_Anomaly"></a> **FileDelete\_Volume\_Anomaly** | Detects an usual spike in the number of files deleted by a user in the Windows Event Logs. This check is applied to each user name. Works using Windows event ID: 4663
-| <a id="FileRead_Volume_Anomaly"></a> **FileRead\_Volume\_Anomaly** | Detects an usual spike in the number of files read or accessed by a user in the Windows Event Logs. This check is applied to each user name. Works using Windows event ID: 4663
+| <a id="anomalous_sequence"></a> **anomalous_sequence** | Detects an unusual sequence of events in the Windows Event Logs. This check is applied to each domain computer individually, currently for the 'Application' and 'System' event logs
+| <a id="Volume_Anomaly"></a> **Volume_Anomaly** | Detects an unusual spike or dip in the number of events in the Windows Event Logs. This check is applied to each unique Event ID.
+| <a id="FileDelete_Volume_Anomaly"></a> **FileDelete\_Volume\_Anomaly** | Detects an unusual spike in the number of files deleted by a user in the Windows Event Logs. This check is applied to each user name. Works using Windows event ID: 4663
+| <a id="FileRead_Volume_Anomaly"></a> **FileRead\_Volume\_Anomaly** | Detects an unusual spike in the number of files read or accessed by a user in the Windows Event Logs. This check is applied to each user name. Works using Windows event ID: 4663
+| <a id="AbnormalFileShareAccount"></a> **AbnormalFileShareAccount** | Detects a user account accessing a file share which they have not recently accessed (approx. in the past 30 days). Works using Windows event ID: 5140
+| <a id="AbnormalFileShareHost"></a> **AbnormalFileShareHost** | Detects a host machine accessing a file share which it does not usually access (approx. in the past 30 days). Works using Windows event ID: 5140
 
 ... more coming soon ...
 
