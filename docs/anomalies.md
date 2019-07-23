@@ -24,6 +24,7 @@
 
 | Anomaly Name | Description
 | - | - |
+| <a id="Known_Threat"></a> **Known_Threat** | Detects a connection whose Destination IP Address is present in our threat intelligence provider database. Typicaly these IP addresses would have been observed as active in some malware, cryptomining or phishing campaign. Seeing this alert present in your network does not always mean an active intrusion. Due to the shared nature of today's Internet infrastructure it is quite common to see common IP addresses such as Google's popular DNS service 8.8.8.8 being listed in threat intelligence feeds.
 | <a id="Network_Volume_Anomaly"></a> **Volume_Anomaly** | Detects an unusual spike or dip in the number of events in the network connection logs. This check is applied to each unique Source Address.
 
 ... more coming soon ...
