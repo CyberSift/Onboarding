@@ -11,7 +11,7 @@ class App extends Component {
         <Grid container className="cs-container" justify="center" alignItems="center">
           <Grid item xs={8} style={{ marginTop: "15vh", marginBottom: 5}}>
             <Typography style={{color: "white", fontFamily:"Courier New"}} variant="display1">
-                CyberSift Onboarding
+                CyberSift Online Help
               </Typography>
             </Grid>
 
